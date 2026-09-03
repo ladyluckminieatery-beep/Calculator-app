@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+
+<button id="themeToggle" class="theme-toggle">
+    🌙 Dark Mode
+</button>
+
+    <h2>Scientific Calculator</h2>
+
+    <input
+        type="text"
+        id="display"
+        class="display"
+        readonly
+    >
+
+    <div class="buttons">
+
+        <!-- Memory -->
+        <button data-value="MC">MC</button>
+        <button data-value="MR">MR</button>
+        <button data-value="M+">M+</button>
+        <button data-value="M-">M-</button>
+        <button data-value="C">C</button>
+        <button data-value="←">←</button>
+
+        <!-- Scientific -->
+        <button data-value="square">x²</button>
+        <button data-value="sqrt">√</button>
+        <button data-value="power">xʸ</button>
+        <button data-value="%">%</button>
+        <button data-value="÷">÷</button>
+        <button data-value="(">(</button>
+
+        <button data-value="sin">sin</button>
+        <button data-value="cos">cos</button>
+        <button data-value="tan">tan</button>
+        <button data-value="log">log</button>
+        <button data-value="ln">ln</button>
+        <button data-value=")">)</button>
+
+        <!-- Numbers -->
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="×">×</button>
+        <button data-value="pi">π</button>
+        <button data-value="e">e</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="-">−</button>
+        <button data-value="factorial">n!</button>
+        <button data-value="1/x">1/x</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="+">+</button>
+        <button data-value="abs">|x|</button>
+        <button data-value="±">±</button>
+
+        <button data-value="0" class="zero">0</button>
+        <button data-value=".">.</button>
+        <button data-value="=" class="equal">=</button>
+
+    </div>
+
+    <div class="history">
+
+    <h3>History</h3>
+
+    <ul id="historyList"></ul>
+
+    <button id="clearHistory">Clear History</button>
+
+</div>
+
+</div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

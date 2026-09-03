@@ -1,0 +1,363 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* ==========================
+   CALCULATOR
+========================== */
+
+.calculator{
+
+    width:460px;
+
+    background:#1f2937;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+}
+
+.calculator h2{
+
+    color:white;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    letter-spacing:1px;
+}
+
+/* ==========================
+   DISPLAY
+========================== */
+
+.display{
+
+    width:100%;
+
+    height:80px;
+
+    background:#0f172a;
+
+    color:#00ff99;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:36px;
+
+    text-align:right;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    outline:none;
+}
+
+/* ==========================
+   BUTTON GRID
+========================== */
+
+.buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:12px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button{
+
+    height:60px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    background:#374151;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+/* Hover */
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    background:#4b5563;
+
+}
+
+/* Click */
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* Number Buttons */
+
+button[data-value="0"],
+button[data-value="1"],
+button[data-value="2"],
+button[data-value="3"],
+button[data-value="4"],
+button[data-value="5"],
+button[data-value="6"],
+button[data-value="7"],
+button[data-value="8"],
+button[data-value="9"]{
+
+    background:#4b5563;
+
+}
+
+/* Operators */
+
+button[data-value="+"],
+button[data-value="-"],
+button[data-value="×"],
+button[data-value="÷"]{
+
+    background:#f59e0b;
+
+}
+
+/* Equal */
+
+.equal{
+
+    background:#10b981;
+
+    grid-column:span 2;
+
+}
+
+/* Clear */
+
+button[data-value="C"]{
+
+    background:#ef4444;
+
+}
+
+/* Scientific */
+
+button[data-value="sin"],
+button[data-value="cos"],
+button[data-value="tan"],
+button[data-value="log"],
+button[data-value="ln"],
+button[data-value="sqrt"],
+button[data-value="square"],
+button[data-value="power"],
+button[data-value="pi"],
+button[data-value="e"],
+button[data-value="factorial"],
+button[data-value="1/x"],
+button[data-value="abs"]{
+
+    background:#2563eb;
+
+}
+
+/* Memory */
+
+button[data-value="MC"],
+button[data-value="MR"],
+button[data-value="M+"],
+button[data-value="M-"]{
+
+    background:#7c3aed;
+
+}
+
+/* Zero Button */
+
+.zero{
+
+    grid-column:span 2;
+
+}
+
+/* Responsive */
+
+@media(max-width:520px){
+
+.calculator{
+
+    width:100%;
+
+}
+
+button{
+
+    height:55px;
+
+    font-size:16px;
+
+}
+
+.display{
+
+    font-size:28px;
+
+}
+
+}
+/* ==========================
+   HISTORY
+========================== */
+
+.history{
+
+    margin-top:25px;
+
+    background:#111827;
+
+    padding:15px;
+
+    border-radius:12px;
+
+}
+
+.history h3{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+#historyList{
+
+    list-style:none;
+
+    max-height:180px;
+
+    overflow-y:auto;
+
+}
+
+#historyList li{
+
+    color:#d1d5db;
+
+    padding:8px 0;
+
+    border-bottom:1px solid #374151;
+
+    font-size:14px;
+
+    word-break:break-word;
+
+}
+
+#clearHistory{
+
+    margin-top:15px;
+
+    width:100%;
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+/* ==========================
+   THEME TOGGLE
+========================== */
+
+.theme-toggle{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* Light Theme */
+
+body.light{
+
+    background:#f3f4f6;
+
+}
+
+body.light .calculator{
+
+    background:white;
+
+}
+
+body.light .display{
+
+    background:#f8fafc;
+
+    color:#111827;
+
+}
+
+body.light .history{
+
+    background:#e5e7eb;
+
+}
+
+body.light .history h3{
+
+    color:#111827;
+
+}
+
+body.light #historyList li{
+
+    color:#374151;
+
+    border-bottom:1px solid #d1d5db;
+
+}
